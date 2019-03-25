@@ -1,0 +1,20 @@
+.block{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+}
+a {
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 21px;
+  text-decoration: none;
+  line-height: 21px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+form{
+  width: 60%;
+}

@@ -1,0 +1,20 @@
+input {
+  margin: 20px  0;
+}
+form {
+  margin-top: 25vh;
+  background-color: #adee99;
+  width: 300px;
+  border: 1px solid darkgrey;
+  border-radius: 10px;
+  padding: 20px;
+}
+.block{
+  display: flex;
+  justify-content: center;
+}
+.btn-success{
+  line-height: 35px;
+  font-size: 18px;
+  width: 130px;
+}

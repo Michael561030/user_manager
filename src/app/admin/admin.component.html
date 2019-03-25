@@ -1,0 +1,42 @@
+<header>
+  <h5>User manager</h5>
+  <a class="btn btn-danger" routerLink="/">Sign up</a>
+</header>
+<div class="add-btn">
+  <a type="button" (click)="signUp(a)"><i class="fas fa-plus"></i></a>
+</div>
+
+<ng-container>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead  class="thead-dark">
+      <tr>
+        <th scope="col ">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+      </tr>
+      </thead>
+      <tbody *ngFor="let user of users let i = index ">
+      <tr>
+        <th scope="row" >{{i+1}}</th>
+        <td>{{user.firstname}}</td>
+        <td>{{user.lastname}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
+        <button (click)="deleteUser(user)">X</button>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
+
+
+<!--<ul>-->
+<!--<li >-->
+<!--{{user.firstname}}:-->
+<!--{{user.lastname}}-->
+<!--<button (click)="deleteUser(user)">X</button>-->
+<!--</li>-->
+<!--</ul>-->

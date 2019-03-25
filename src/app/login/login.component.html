@@ -1,0 +1,30 @@
+<div class="block">
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    <fieldset class="form-group"  id="formGroup">
+      <div class="form-group row text-center" [ngClass]="{'has-error': loginForm.get('email').errors && (loginForm.get('email').touched || loginForm.get('email').dirty)}">
+        <label for="email">Type your email</label>
+        <input type="email" placeholder="Email" id="email"  class="form-control" name="email" formControlName="email">
+        <span class="help-block" *ngIf="loginForm.get('email').errors && (loginForm.get('email').touched || loginForm.get('email').dirty)">
+          <span *ngIf="loginForm.get('email').errors">
+            Email is required
+          </span>
+         </span>
+      </div>
+      <div class="form-group row text-center" [ngClass]="{'has-error': loginForm.get('password').errors && (loginForm.get('password').touched || loginForm.get('password').dirty)}">
+        <label for="password">Type your password</label>
+        <input type="password" placeholder="Password" id="password" class="form-control" name="password" formControlName="password"  >
+        <div class="d-flex justify-content-center">
+          <span class="help-block" *ngIf="loginForm.get('password').errors && (loginForm.get('password').touched || loginForm.get('password').dirty)">
+            <span *ngIf="loginForm.get('password').errors">
+              Password is required. At least 6 characters.
+            </span>
+           </span>
+          <button type="submit" class="btn btn-success" value="login"  >Log in</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+
+
